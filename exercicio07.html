@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Transações Bancárias</title>
+</head>
+<body>
+    <h1>Simulador de Transações Bancárias</h1>
+
+    <div>
+        <span id="saldo_span">Saldo: </span>
+    </div>
+    <button onclick="receber()">Receber 100</button>
+    <button onclick="pagar()">Pagar 50</button>
+</body>
+</html>
+<script>
+    let saldo = 0
+
+    function receber() {
+        saldo+=100
+        saldo_span.innerHTML = `O seu saldo é ${saldo}`
+    }
+
+    function pagar() {
+        saldo-=50
+        saldo_span.innerHTML = `O seu saldo é ${saldo}`
+    }
+</script>

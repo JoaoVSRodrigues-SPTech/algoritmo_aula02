@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco Virtual: Depósitos e Retiradas</title>
+</head>
+<body>
+    <h1>Banco Virtual: Depósitos e Retiradas</h1>
+
+    <span id="saldo_atual">Saldo atual: 0</span><br>
+
+    <span>Valor depositado/retirado: </span><br>
+    <input type="text" id="input_update_valor"><br>
+
+    <button onclick="btnDepositar()">Depositar</button><br>
+    <button onclick="btnRetirar()">Retirar</button>
+
+
+</body>
+</html>
+<script>
+    let saldo = 0
+
+    function btnDepositar(){
+        saldo += Number(input_update_valor.value) 
+        saldo_atual.innerHTML = `Saldo atual: ${saldo}`   
+    }
+
+    function btnRetirar(){
+        saldo -= Number(input_update_valor.value) 
+        saldo_atual.innerHTML = `Saldo atual: ${saldo}`   
+    }
+</script>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador de Resultados Eleitorais</title>
+</head>
+<body>
+    <h1>Analisador de Resultados Eleitorais</h1>
+
+    <div>Votos Candidato A: </div><br>
+    <input type="text" id="input_candidatosA">
+
+    <div>Votos Candidato B: </div><br>
+    <input type="text" id="input_candidatosB">
+
+    <div>Votos Brancos: </div><br>
+    <input type="text" id="input_brancos">
+
+    <div>Votos Nulos: </div><br>
+    <input type="text" id="input_nulos">
+
+    <button onclick="resultadoEleicao()">Resultado Eleicao</button>
+
+    <div id="resultado_eleicao"></div>
+</body>
+</html>
+<script>
+    let totalVotos = 0
+
+    function resultadoEleicao() {
+        let candidatoA = Number(input_candidatosA.value)
+        let candidatoB = Number(input_candidatosB.value)
+        let brancos = Number(input_brancos.value)
+        let nulos = Number(input_nulos.value)
+
+        totalVotos = (candidatoA + candidatoB + brancos + nulos)
+
+        resultado_eleicao.innerHTML = `
+        Total de votos: ${totalVotos}<br>
+        Candidato A: ${} <br>
+        Candidato B: ${} <br>
+        Inválidos: ${} <br>
+        `
+    }
+</script>
