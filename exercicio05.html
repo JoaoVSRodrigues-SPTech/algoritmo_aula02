@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media SPTech</title>
+</head>
+<body>
+    <h1>Calculo da Media na SPTech</h1>
+    <span>Nota da Continuada: </span>
+    <input type="text" id="input_continuada"><br>
+
+    <span>Nota de Pesquisa e Inovacao: </span>
+    <input type="text" id="input_pi"><br>
+
+    <span>Nome do aluno: </span>
+    <input type="text" id="input_nome"><br>
+
+    <button onclick="calcularMedia()">Calcular Media</button><br>
+    <span id="media"></span>
+</body>
+</html>
+<script>
+    function calcularMedia(){
+        media.innerHTML = "A média de " + input_nome.value + " será de " + ((((Number(input_pi.value)) * 0.6) + ((Number(input_continuada.value)) * 0.4)))
+    }
+</script>

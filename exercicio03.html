@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilhete Unico</title>
+</head>
+<body>
+    <h1>Economia com Bilhete Unico</h1>
+
+    <span>Valor da passagem: </span>
+    <input type="text" id="input_valor"><br>
+
+    <button onclick="calcularEconomia()">Ver Economia</button><br>
+    <span id="ver_economia"></span>
+</body>
+</html>
+<script>
+    function calcularEconomia() {
+        ver_economia.innerHTML = "Você economizará R$" + (Number(input_valor.value / 2) * 22).toFixed(2)
+    }
+</script>

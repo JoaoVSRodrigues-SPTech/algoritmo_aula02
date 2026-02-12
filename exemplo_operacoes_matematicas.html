@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>Numero 1: </span>
+    <input type="text" id="input_n1"><br>
+    
+    <span>Numero 2: </span>
+    <input type="text" id="input_n2"><br>
+
+    <button onclick="calcular()">Calcular</button>
+</body>
+</html>
+<script>
+    function calcular() {
+        const inputN1 = parseFloat(input_n1.value)
+        const inputN2 = parseFloat(input_n2.value)
+        alert("A soma e: " + (inputN1 + inputN2))
+        alert("A subtracao e: " + (inputN1 - inputN2))
+        alert("A multiplicacao e: " + (inputN1 * inputN2))
+        alert("A divisao e: " + (inputN1 / inputN2).toFixed(2))
+        alert("A potenciacao e: " + (inputN1 ** inputN2))
+        alert("O resto da divisao: " + (inputN1 % inputN2))
+        alert("Raiz quadrada do N1: " + (inputN1 ** 0.5).toFixed(2))
+        alert("Raiz quadrada do N2: " + (inputN2 ** 0.5).toFixed(2))
+    }
+</script>

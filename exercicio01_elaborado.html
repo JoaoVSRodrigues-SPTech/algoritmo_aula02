@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Aposentadoria: Quanto Falta?</h1>
+
+    <p>Aposentadoria Homem: </p>
+    <input type="text" id="input_homem">
+
+    <p>Aposentadoria Mulher: </p>
+    <input type="text" id="input_mulher"><br>
+
+    <button onclick="calcularAposentadoria()" id="botao_calcular">Calcular a aposentadoria</button>
+</body>
+</html>
+<script>
+    function calcularAposentadoria(){
+
+        const botao = document.getElementById("botao_calcular")
+        if (input_homem.value == '' && input_mulher.value == '') {
+            alert("ambos os campos estao vazios! Preencha para continuar")
+            return
+        }
+
+        if (input_homem.value != '' ) {
+            parseInt(input_homem.value) >= 70 && alert("Voce ja e aposentado!")
+
+            const aposentadoriaHomem = 70 - parseInt(input_homem.value)
+            botao.addEventListener("click", () => {
+                alert("Faltam " + aposentadoriaHomem + " anos para a aposentadoria")
+            })
+        }
+        if (input_mulher.value != '' ) {
+            parseInt(input_mulher.value) >= 60 && alert("Voce ja e aposentada!")
+
+            const aposentadoriaMulher = 60 - parseInt(input_mulher.value)
+            botao.addEventListener("click", () => {
+                alert("Faltam " + aposentadoriaMulher + " anos para a aposentadoria")
+            })
+        }
+    }
+</script>

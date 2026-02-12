@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculadora Basica</h1>
+    
+    <span>Numero 1: </span>
+    <input type="text" id="input_n1"><br>
+
+    <span>Numero 2: </span>
+    <input type="text" id="input_n2"><br>
+
+    <button onclick="calcular()">Calcular</button><br>
+    <span id="soma"></span><br>
+    <span id="subtracao"></span><br>
+    <span id="produto"></span><br>
+    <span id="divisao"></span><br>
+</body>
+</html>
+<script>
+    function calcular() {
+        soma.innerHTML = "A soma e: " + ((Number(input_n1.value)) + (Number(input_n2.value)))
+        subtracao.innerHTML = "A diferenca e: " + (Number(input_n1.value) - Number(input_n2.value))
+        produto.innerHTML = "O produto e " + (Number(input_n1.value) * Number(input_n2.value))
+        divisao.innerHTML = "A divisao e " + ((Number(input_n1.value) / Number(input_n2.value)).toFixed(2))
+    }   
+</script>
